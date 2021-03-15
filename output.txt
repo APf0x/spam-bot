@@ -1,0 +1,4 @@
+hello i am the creator of htis little bot. firstly i want to tell tou that if you delete output.txt or spam-bot.py the bot is not going to work 
+firstly you will have to delete this text and open the file named output.txt i case you alredy opened it because i dont know from where you are reading this file so let me simply explain first delete tha content in the file output.txt then write down what you want the bot to say then save and run the script 
+disclamer!!! you will have 5 sec before the bot will start typing so you have to first go to the place where you want it to write 
+and last or the most important part if you have a text that is too long you will have a problem cuz the bot wont stop typing i am too lazy to make a kill button so u're doomed or maybie you will find a way well whit this said have fun
