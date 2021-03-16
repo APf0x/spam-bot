@@ -1,25 +1,27 @@
-
 # made by APfox/redfox (same person)
+# Contribs: MatMasIt
+import pyautogui
+import time
 
-import pyautogui, time
-
-time.sleep(5)
-f = open("output.txt", "r")
-for text in f:
-    pyautogui.typewrite(text)
-    pyautogui.press("enter")
-    #you can togle time sleep increase it or if you want you can take it off (only if ur pc is good or it will lag the shit out of ur PC)
-    time.sleep(0.2)
-
-#if you wanna spam only one letter or word i mean you can do what you want.
-
-"""
-
-time.sleep(5)
-f = ("z")
-while True:
-    time.sleep(0.4)
-    for word in f:
-        pyautogui.typewrite(word)
-"""
-
+#  <config>
+config = {
+    "initialSleep": 5,
+    "text": open("input.txt", "r").readlines(),
+    "submitKey": "enter",
+    "intervalSleep": 0.2,  # you can set it to 0, too if your pc is powerful enough
+    "spamMode": 0  # 0 -> lines, 1 -> words , 2 -> characters
+}
+# </config>
+time.sleep(config["initialSleep"])
+for line in config["text"]:
+    spamList = []
+    if config["spamMode"] == 0:
+        spamList = [line]
+    elif config["spamMode"] == 1:
+        spamList = line.split()
+    elif config["spamMode"] == 2:
+        spamList = list(line)
+    for element in spamList:
+        pyautogui.typewrite(element)
+        pyautogui.press(config["submitKey"])
+        time.sleep(config["intervalSleep"])
